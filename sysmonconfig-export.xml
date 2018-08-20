@@ -683,6 +683,8 @@
 			<ParentImage condition="end with">C:\Program Files (x86)\Common Files\Adobe\AdobeGCClient\AGSService.exe</ParentImage>
 			<Image condition="end with">C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroCEF\RdrCEF.exe</Image> <!--Adobe:AcrobatReader: Sandbox subprocess, still evaluating security exposure-->
 			<Image condition="end with">C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\LogTransport2.exe</Image>
+			<!--SECTION: Splunk-->
+			<ParentImage condition="is">C:\Program Files\SplunkUniversalForwarder\bin\splunkd.exe</ParentImage> <!--Launches many uninteresting sub-processes-->
 			<!--SECTION: Adobe:Acrobat DC-->
 			<Image condition="end with">C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\AcroCEF\AcroCEF.exe</Image> <!--Adobe:Acrobat: Sandbox subprocess, still evaluating security exposure-->
 			<Image condition="end with">C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\LogTransport2.exe</Image> <!--Adobe: Telemetry [ https://forums.adobe.com/thread/1006701 ] -->
@@ -1173,7 +1175,8 @@
 			<Image condition="image">g2mcomm.exe</Image> <!--GoToMeeting-->
 			<Image condition="end with">AppData\Local\Microsoft\Teams\current\Teams.exe</Image> <!--Microsoft: Teams-->
 			<DestinationPort condition="is">53</DestinationPort>   <!--DNS Lookups-->
-			<Image condition="is">C:\Program Files\Cisco\AMP\6.0.5\sfc.exe</Image>
+			<Image condition="is">C:\Program Files\Cisco\AMP\6.0.5\sfc.exe
+			</Image>
 		</NetworkConnect>
 	<!--SYSMON EVENT ID 4 : RESERVED FOR SYSMON STATUS MESSAGES-->
 
