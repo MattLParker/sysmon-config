@@ -712,7 +712,8 @@
 			<!--SECTION: Adobe:Creative Cloud-->
 			<!-- Section: VScode/GIT -->
 			<ParentCommandLine condition="begin with">"C:\Program Files\Git\cmd\git.exe" </ParentCommandLine><!--GIT-->
-			<CommandLine condition="begin with">"C:\Program Files\Git\cmd\git.exe" </CommandLine>
+			<CommandLine condition="begin with">"C:\Program Files\Git\cmd\git.exe" 
+			</CommandLine>
 			<!--SECTION: Cisco-->
 			<ParentImage condition="end with">C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnagent.exe</ParentImage> <!--Cisco: Calls netsh to change settings on connect-->
 			<Image condition="end with">C:\Program Files (x86)\Adobe\Adobe Creative Cloud\ACC\Creative Cloud.exe</Image>
@@ -1180,7 +1181,9 @@
 			<Image condition="image">g2mcomm.exe</Image> <!--GoToMeeting-->
 			<Image condition="end with">AppData\Local\Microsoft\Teams\current\Teams.exe</Image> <!--Microsoft: Teams-->
 			<DestinationPort condition="is">53</DestinationPort>   <!--DNS Lookups-->
-			<Image condition="is">C:\Program Files\Cisco\AMP\6.0.5\sfc.exe
+			<Image condition="is">C:\Program Files\Cisco\AMP\6.0.5\sfc.exe <!--AMP for Endpoints-->
+			<Image condition="is">C:\Windows\CCM\CcmExec.exe <!--Microsoft: SCCM-->
+
 			</Image>
 		</NetworkConnect>
 	<!--SYSMON EVENT ID 4 : RESERVED FOR SYSMON STATUS MESSAGES-->
