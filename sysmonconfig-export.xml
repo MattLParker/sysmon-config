@@ -2819,13 +2819,15 @@
 			<!--SECTION: Google-->
 			<Image condition="is">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Google\Update\GoogleUpdate.exe</Image>
-			<Image condition="contains">AppData\Local\Google\Chrome\User Data\SwReporter\</Image>
+			<Image condition="contains">AppData\Local\Google\Chrome\User Data\SwReporter\</Image>C
 			<PipeName condition="contains">mojo.</PipeName>
 			<PipeName condition="contains">crashpad_</PipeName>
 			<PipeName condition="contains">chrome.</PipeName>
 			<PipeName condition="contains">GoogleCrashServices</PipeName>
 			<!--SECTION: Other-->
 			<Image condition="end with">slack.exe</Image>
+			<!--SECTION: VSCode-->
+			<Image condition="end with">Microsoft VS Code\Code.exe</Image>
 			<!--SECTION: ConnectWise-->
 			<PipeName condition="contains">booma\</PipeName>
 			<!--SECTION: EnPass-->
