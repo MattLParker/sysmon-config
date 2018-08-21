@@ -2826,8 +2826,6 @@
 			<PipeName condition="contains">GoogleCrashServices</PipeName>
 			<!--SECTION: Other-->
 			<Image condition="end with">slack.exe</Image>
-			<!--SECTION: VSCode-->
-			<Image condition="end with">Microsoft VS Code\Code.exe</Image>
 			<!--SECTION: ConnectWise-->
 			<PipeName condition="contains">booma\</PipeName>
 			<!--SECTION: EnPass-->
