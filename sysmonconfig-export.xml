@@ -138,24 +138,6 @@
 			<ParentImage name="MitreRef=T1015,Technique=Accessibility Features,Tactic=Persistence/Privilege Escalation" condition="end with">DisplaySwitch.exe</ParentImage>
 			<ParentImage name="MitreRef=T1015,Technique=Accessibility Features,Tactic=Persistence/Privilege Escalation" condition="end with">Narrator.exe</ParentImage>
 			<ParentImage name="MitreRef=T1015,Technique=Accessibility Features,Tactic=Persistence/Privilege Escalation" condition="end with">AtBroker.exe</ParentImage>
-<<<<<<< HEAD
-			<Image name="MitreRef=T1138,Technique=Application Shimming-Persistence/Privilege Escalation" condition="end with">sdbinst.exe</Image>
-			<Image name="MitreRef=T1053,Technique=Execution/Persistence/Privledge Escalation" condition="end with">schtasks.exe</Image>
-			<ParentImage name="MitreRef=T1053,Technique=Execution/Persistence/Privledge Escalation" condition="end with">schtasks.exe</ParentImage>
-			<CommandLine name="MitreRef=T1053,Technique=Execution/Persistence/Privledge Escalation" condition="contains">schtasks /create</CommandLine>
-			<CommandLine name="MitreRef=T1053,Technique=Execution/Persistence/Privledge Escalation" condition="contains">schtasks.exe /create</CommandLine>
-			<Image name="MitreRef=T1053,Technique=Execution/Persistence/Privledge Escalation" condition="end with">\at.exe</Image>
-			<ParentImage name="MitreRef=T1053,Technique=Execution/Persistence/Privledge Escalation" condition="end with">\at.exe</ParentImage>
-			<CommandLine name="MitreRef=ToDo,Technique=Powershell Injection Persistence Bypass - Execution, Lateral Movement" condition="contains">System.Management.Automation</CommandLine>
-			<CommandLine name="MitreRef=T1136,Technique=Create Account,Tactic=Persistence,Alert=Account Creation via command line" condition="contains">net user /add</CommandLine>
-			<CommandLine name="MitreRef=T1136,Technique=Create Account,Tactic=Persistence,Alert=Administrator added via Command Line" condition="contains">net localgroup administrators /add</CommandLine>
-			<!--MITRE TACTIC: Lateral Movement-->
-			<ParentImage name="MitreRef=T1028,Technique=Remote WMIC/Execution, Lateral Movement,Alert=Hacking" condition="end with">wmiprvse.exe</ParentImage>
-			<!--MITRE TECHNIQUE: Obfuscation-->
-			<CommandLine name="MitreRef=T1001,Technique=Data Obfuscation,Tactic=Command And Control,Alert=Hacking" condition="contains">FromBase64String</CommandLine>
-			<CommandLine name="MitreRef=T1086,Technique=PowerShell,Tactic=Execution,Alert=Detect Secure Strings" condition="contains">convertto-securestring</CommandLine>
-			<CommandLine name="MitreRef=T1086,Technique=PowerShell,Tactic=Execution,Alert=Detect some more obfuscation" condition="contains">VerbosePreference.ToString</CommandLine>
-=======
 			<Image name="MitreRef=T1138,Technique=Application Shimming-Persistence/Privilege Escalation,Alert=Application Shimming" condition="end with">sdbinst.exe</Image>
 			<Image name="MitreRef=T1053,Technique=Scheduled Task,Tactic=Execution/Persistence/Privledge Escalation,Alert=Task Scheduler execution" condition="end with">schtasks.exe</Image>
 			<ParentImage name="MitreRef=T1053,Technique=Scheduled Task,Tactic=Execution/Persistence/Privledge Escalation,Alert=Child process from schtasks" condition="end with">schtasks.exe</ParentImage>
@@ -177,7 +159,6 @@
 			<CommandLine name="MitreRef=T1001,Technique=Data Obfuscation,Tactic=Command And Control,Alert=Hacking" condition="contains">FromBase64String</CommandLine>
 			<CommandLine name="MitreRef=T1086,Technique=PowerShell,Tactic=Execution,Alert=Detect Secure Strings,Alert=Powershell Secure String creation" condition="contains">convertto-securestring</CommandLine>
 			<CommandLine name="MitreRef=T1086,Technique=PowerShell,Tactic=Execution,Alert=Detect some more obfuscation,Alert=Powershell Obfuscation with VerbosePreference" condition="contains">VerbosePreference.ToString</CommandLine>
->>>>>>> ba0d6d04f4a143f238f1f2b31f5e9cb9ef3168a2
 			<CommandLine name="MitreRef=T1001,Technique=Data Obfuscation,Tactic=Command And Control,Alert=Hacking" condition="contains">runtime.interopservices.marshal</CommandLine>
 			<CommandLine name="MitreRef=T1001,Technique=Data Obfuscation,Tactic=Command And Control,Alert=Hacking" condition="contains">VerbosePreference.ToString</CommandLine>
 			<CommandLine name="MitreRef=T1001,Technique=Data Obfuscation,Tactic=Command And Control,Alert=Hacking" condition="contains">-windowstyle h</CommandLine>
@@ -199,38 +180,12 @@
 			<CommandLine name="MitreRef=T1001,Technique=Data Obfuscation,Tactic=Command And Control,Alert=Hacking" condition="contains">-win hidden</CommandLine>
 			<CommandLine name="MitreRef=T1001,Technique=Data Obfuscation,Tactic=Command And Control,Alert=Hacking" condition="contains">-Nop</CommandLine>
 			<CommandLine name="MitreRef=T1001,Technique=Data Obfuscation,Tactic=Command And Control,Alert=Hacking" condition="contains">-Noni</CommandLine>
-<<<<<<< HEAD
-=======
 			<CommandLine name="MitreRef=T1001,Technique=Data Obfuscation,Tactic=Command And Control,Alert=Hacking" condition="contains">-encodedc</CommandLine>
->>>>>>> ba0d6d04f4a143f238f1f2b31f5e9cb9ef3168a2
 			<CommandLine name="MitreRef=T1001,Technique=Data Obfuscation,Tactic=Command And Control" condition="contains">-ec</CommandLine>
 			<CommandLine name="MitreRef=T1001,Technique=Data Obfuscation,Tactic=Command And Control" condition="contains">-en</CommandLine>
 			<CommandLine name="MitreRef=T1001,Technique=Data Obfuscation,Tactic=Command And Control,Alert=Hacking" condition="contains">^c^o^m^S^p^E^c^</CommandLine>
 			<CommandLine name="MitreRef=T1001,Technique=Data Obfuscation,Tactic=Command And Control,Alert=Hacking" condition="contains">C^om^S^pEc</CommandLine>
 			<!--Native Windows tools - Living off the land-->
-<<<<<<< HEAD
-			<Image name="MitreRef=ToDo,Technique=" condition="end with">query.exe</Image> <!--Microsoft:Windows: shows information about processes -->
-			<Image name="MitreRef=CAPEC-293,Technique=Traceroute Route Enumeratio,MitreURL= https://capec.mitre.org/data/definitions/293.html" condition="end with">tracert.exe</Image> <!--Microsoft:Windows: shows routing information -->
-			<Image name="MitreRef=ToDo,Technique=" condition="end with">tree.com</Image> <!--Microsoft:Windows: shows recursive directory listing -->
-			<Image name="MitreRef=T1134,Technique=Access Token Manipulation" condition="end with">runas.exe</Image> <!--Microsoft:Windows: run a process as another user -->
-			<Image name="MitreRef=ToDo,Technique=" condition="end with">taskkill.exe</Image> <!--Microsoft:Windows: stops processes -->
-			<Image name="MitreRef=ToDo,Technique=" condition="end with">klist.exe</Image> <!--Microsoft:Windows: show cached kerberos tickets -->
-			<Image name="MitreRef=ToDo,Technique=" condition="end with">hh.exe</Image> <!--Microsoft:Windows: HTML Helper-->
-			<Image name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land" condition="end with">odbcconf.exe</Image> <!--Microsoft:Windows: allows for driver loads -->
-			<Image name="MitreRef=T1202,Technique=Hacking/LOLBins-Living off the Land" condition="end with">pcalua.exe</Image> <!--Microsoft:Windows: Program Compatibility Assistant)-->
-			<Image name="MitreRef=T1158,Technique=Hacking/LOLBins-Living off the Land" condition="end with">attrib.exe</Image>
-			<Image name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land" condition="end with">cmdkey.exe</Image> <!--Microsoft:Windows: creates, lists, and deletes stored user names and passwords or credentials.-->
-			<Image name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land" condition="end with">nltest.exe</Image>
-			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land" condition="contains">nltest.exe</CommandLine>
-			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land" condition="contains">ExtExport</CommandLine>
-			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land,Alert=Hacking" condition="contains">bash -c</CommandLine>
-			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land,Alert=Hacking" condition="contains">bash.exe -c</CommandLine>
-			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land" condition="contains">cmdkey /list</CommandLine>
-			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land" condition="contains">cmdkey.exe /list</CommandLine>
-			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land,Alert=Hacking" condition="contains">certutil.exe -urlcache -split -f</CommandLine>
-			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land,Alert=Hacking" condition="contains">certutil -urlcache -split -f</CommandLine>
-			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land" condition="contains">csc -out:</CommandLine>
-=======
 			<Image name="MitreRef=ToDo,Technique=,Alert=Process/Session/User Query with query.exe" condition="end with">query.exe</Image> <!--Microsoft:Windows: shows information about processes -->
 			<Image name="MitreRef=CAPEC-293,Technique=Traceroute Route Enumeration,Alert=Traceroute Enumeration,MitreURL= https://capec.mitre.org/data/definitions/293.html" condition="end with">tracert.exe</Image> <!--Microsoft:Windows: shows routing information -->
 			<Image name="MitreRef=ToDo,Technique=,Alert=tree of directory structure disclosure" condition="end with">tree.com</Image> <!--Microsoft:Windows: shows recursive directory listing -->
@@ -252,7 +207,6 @@
 			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land,Alert=Hacking" condition="contains">certutil.exe -urlcache -split -f</CommandLine>
 			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land,Alert=Hacking" condition="contains">certutil -urlcache -split -f</CommandLine>
 			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land,Alert=csc compile output" condition="contains">csc -out:</CommandLine>
->>>>>>> ba0d6d04f4a143f238f1f2b31f5e9cb9ef3168a2
 			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land" condition="contains">csc.exe -out:</CommandLine>
 			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land" condition="contains">csc -target:library</CommandLine>
 			<CommandLine name="MitreRef=ToDo,Technique=Hacking/LOLBins-Living off the Land" condition="contains">csc.exe -target:library</CommandLine>
@@ -1350,11 +1304,7 @@
 			<DestinationPort condition="is">5357</DestinationPort> <!--WSD API noise-->
 			<DestinationPort condition="is">3544</DestinationPort> <!--Teredo-->
 			<DestinationPort condition="is">3702</DestinationPort> <!--Windows: WS-Discovery noise-->
-<<<<<<< HEAD
 			<DestinationPort condition="is">7680</DestinationPort> <!--Windows: Windows Delivery Optimization Noise-->
-=======
-			<SourcePort condition="is">3702</SourcePort> <!--Windows: WS-Discovery noise-->
->>>>>>> ba0d6d04f4a143f238f1f2b31f5e9cb9ef3168a2
 			<SourcePort condition="is">50646</SourcePort> <!--Windows: WS-Discovery noise-->
 			<DestinationPort condition="is">53</DestinationPort>   <!--DNS Lookups-->
 			<SourcePort condition="is">53</SourcePort>  <!--DNS Lookups-->
@@ -1378,13 +1328,9 @@
 			<DestinationHostname condition="begin with">efolder01</DestinationHostname> <!-- eFolder Noise -->
 			<DestinationPort condition="is">2080</DestinationPort><!--eFolder Noise -->
 			<Image condition="end with">g2mcomm.exe</Image> <!-- gotomeeting noise -->
-<<<<<<< HEAD
-			<Image condition="is">C:\Program Files (x86)\Webroot\WRSA.exe</Image>
-=======
 			<Image condition="end with">C:\Program Files (x86)\LabTech Client\LTClient.exe</Image>
 			<Image condition="end with">C:\Windows\LTSvc\LTSVC.exe</Image>
 			<Image condition="end with">C:\Program Files (x86)\Webroot\WRSA.exe</Image>
->>>>>>> ba0d6d04f4a143f238f1f2b31f5e9cb9ef3168a2
 			<Image condition="begin with">C:\Program Files (x86)\SmartGit\</Image>
 			<Image condition="end with">DSPro\Programs\pr001Celery98.exe</Image>
 			<Image condition="image">g2ax_comm_expert.exe</Image> <!--GoToMeeting-->
@@ -3086,10 +3032,7 @@
 			<Image condition="is">C:\Program Files (x86)\Fortinet\FortiClient\FortiSSLVPNdaemon.exe</Image>
 			<!--SECTION: Sophos VPN Client-->
 			<Image condition="is">c:\program files (x86)\sophos\sophos ssl vpn client\bin\openvpnserv.exe</Image>
-<<<<<<< HEAD
-=======
 			<!--SECTION: Labtech-->
->>>>>>> ba0d6d04f4a143f238f1f2b31f5e9cb9ef3168a2
 			<Image condition="contains">ScreenConnect.WindowsClient.exe</Image>
 			<Image condition="contains">ScreenConnect.ClientService.exe</Image>
 			<Image condition="is">C:\Program Files\OpenVPN\bin\openvpn-gui.exe</Image>
