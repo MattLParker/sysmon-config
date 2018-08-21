@@ -23,6 +23,6 @@ sysmon64.exe -accepteula -i sysmonconfig-export.xml
 sc failure Sysmon64 actions= restart/10000/restart/10000// reset= 120
 echo [+] Sysmon Successfully Installed!
 echo [+] Creating Auto Update Task set to Hourly..
-REM SchTasks /Create /RU SYSTEM /RL HIGHEST /SC HOURLY /TN Update_Sysmon_Rules /TR C:\ProgramData\sysmon\Auto_Update.bat /F /ST %tasktime%
+REM SchTasks /Create /RU SYSTEM /RL HIGHEST /SC HOURLY /MO 3 /TN Update_Sysmon_Rules /TR C:\ProgramData\sysmon\Auto_Update.bat /F /ST %tasktime%
 timeout /t 10
 exit
