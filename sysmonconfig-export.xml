@@ -1134,6 +1134,7 @@
 			<Image condition="image">ScreenConnect.WindowsClient.exe</Image> <!--ScreenConnect Noise-->
 			<Image condition="end with">AppData\Roaming\Dashlane\Dashlane.exe</Image> <!--Dashlane Password Manager | Credit: @awfulyprideful-->
 			<Image condition="end with">AppData\Roaming\Dashlane\DashlanePlugin.exe</Image> <!--Dashlane Password Manager | Credit: @awfulyprideful-->
+			<Image condition="end with">Git\mingw64\libexec\git-core\git-remote-https.exe</Image> <!--git Connect-->
 			<Image condition="end with">Vivaldi\Application\vivaldi.exe</Image> <!--Vivaldi Browser Installed in User profile-->
 			<DestinationHostname condition="end with">microsoft.com</DestinationHostname> <!--Microsoft:Update delivery-->
 			<DestinationHostname condition="end with">microsoft.com.akadns.net</DestinationHostname> <!--Microsoft:Update delivery-->
