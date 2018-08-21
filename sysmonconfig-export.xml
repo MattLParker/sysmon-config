@@ -868,6 +868,7 @@
 
 		<!--DATA: RuleName, UtcTime, ProcessGuid, ProcessId, Image, User, Protocol, Initiated, SourceIsIpv6, SourceIp, SourceHostname, SourcePort, SourcePortName, DestinationIsIpV6, DestinationIp, DestinationHostname, DestinationPort, DestinationPortName-->
 		<NetworkConnect onmatch="include">
+			<DestinationPort name="Service=Remote Desktop Connection" condition="is">3389</DestinationPort>
 			<!--Suspicious sources for network-connecting binaries-->
 			<Image condition="begin with">C:\Users</Image> <!--Tools downloaded by users can use other processes for networking, but this is a very valuable indicator.-->
 			<Image condition="contains">\temp\</Image> <!--Network Connection in Temp Directories-->
@@ -1048,7 +1049,6 @@
 			<!--Ports-->
 			<DestinationPort name="Service=HTTP Connection" condition="is">80</DestinationPort>
 			<DestinationPort name="Service=HTTPS Connection" condition="is">443</DestinationPort>
-			<DestinationPort name="Service=Remote Desktop Connection" condition="is">3389</DestinationPort>
 			<DestinationPort condition="is">3540</DestinationPort> <!--Remote Assistance Port-->
 			<DestinationPort name="Service=SSH Connection" condition="is">22</DestinationPort>
 			<DestinationPort name="Service=Telnet" condition="is">23</DestinationPort>
