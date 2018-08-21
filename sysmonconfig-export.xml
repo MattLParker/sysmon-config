@@ -710,6 +710,9 @@
 			<Image condition="end with">C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\UWA\updaterstartuputility.exe</Image>
 			<ParentImage condition="is">C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\UWA\updaterstartuputility.exe</ParentImage>
 			<!--SECTION: Adobe:Creative Cloud-->
+			<!-- Section: VScode/GIT -->
+			<ParentCommandLine condition="begin with">"C:\Program Files\Git\cmd\git.exe" </ParentCommandLine><!--GIT-->
+			<CommandLine condition="begin with">"C:\Program Files\Git\cmd\git.exe" </CommandLine>
 			<!--SECTION: Cisco-->
 			<ParentImage condition="end with">C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnagent.exe</ParentImage> <!--Cisco: Calls netsh to change settings on connect-->
 			<Image condition="end with">C:\Program Files (x86)\Adobe\Adobe Creative Cloud\ACC\Creative Cloud.exe</Image>
