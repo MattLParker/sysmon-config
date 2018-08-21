@@ -1139,6 +1139,7 @@
 			<Image condition="image">Spotify.exe</Image> <!--Spotify-->
 			<Image condition="end with">AppData\Roaming\Dropbox\bin\Dropbox.exe</Image> <!--Dropbox-->
 			<Image condition="image">OneDriveStandaloneUpdater.exe</Image> <!--Microsoft:OneDrive-->
+			<Image condition="begins with">C:\Windows\SystemApps\Microsoft.Windows.Cortana</Image> <!--Microsoft:Search Noise Win10-->
 			<Image condition="image">ConnectWise.exe</Image> <!--ConnectWise Noise-->
 			<Image condition="image">ScreenConnect.WindowsClient.exe</Image> <!--ScreenConnect Noise-->
 			<Image condition="end with">AppData\Roaming\Dashlane\Dashlane.exe</Image> <!--Dashlane Password Manager | Credit: @awfulyprideful-->
