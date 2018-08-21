@@ -1189,7 +1189,7 @@
 			<DestinationPort condition="is">53</DestinationPort>   <!--DNS Lookups-->
 			<Image condition="is">C:\Program Files\Cisco\AMP\6.0.5\sfc.exe <!--AMP for Endpoints-->
 			<Image condition="is">C:\Windows\CCM\CcmExec.exe <!--Microsoft: SCCM-->
-
+			<Image condition="end with">Microsoft VS Code\Code.exe</Image> <!--Microsoft: vscode-->
 			</Image>
 		</NetworkConnect>
 	<!--SYSMON EVENT ID 4 : RESERVED FOR SYSMON STATUS MESSAGES-->
