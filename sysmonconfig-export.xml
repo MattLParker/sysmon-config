@@ -561,6 +561,7 @@
 		</ProcessCreate>
 		<ProcessCreate onmatch="exclude">
 			<!--SECTION: Microsoft Windows-->
+			<Image condition="is">C:\Windows\CCM\UpdateTrustedSites.exe</Image> <!--SCCM-->
 			<IntegrityLevel condition="is">AppContainer</IntegrityLevel> <!--Microsoft:Windows: Don't care about sandboxed processes-->
 			<CommandLine condition="begin with">C:\Windows\system32\DllHost.exe /Processid</CommandLine> <!--Microsoft:Windows-->
 			<CommandLine condition="is">C:\Windows\system32\SearchIndexer.exe /Embedding</CommandLine> <!--Microsoft:Windows: Search Indexer-->
@@ -1187,6 +1188,8 @@
 			<!--Microsoft Net Connections-->
 			<Image condition="is">C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\SearchUI.exe</Image>			
 			<Image condition="is">C:\Windows\CCM\CcmExec.exe</Image>
+			
+			
 			<!--Microsoft ASN IP Block-->
 			<DestinationHostname condition="end with">aps.windows.com</DestinationHostname>
 			<DestinationHostname condition="end with">arc.msn.com</DestinationHostname>
