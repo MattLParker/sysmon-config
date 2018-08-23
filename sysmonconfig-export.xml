@@ -742,7 +742,7 @@
 			<!--SECTION: Adobe:Creative Cloud-->
 			<!-- Section: VScode/GIT -->
 			<ParentCommandLine condition="begin with">"C:\Program Files\Git\cmd\git.exe" </ParentCommandLine><!--GIT-->
-			<CommandLine condition="begin with">"C:\Program Files\Git\cmd\git.exe" 
+			<CommandLine condition="begin with">"C:\Program Files\Git\cmd\git.exe"
 			</CommandLine>
 			<!--SECTION: Cisco-->
 			<ParentImage condition="end with">C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnagent.exe</ParentImage> <!--Cisco: Calls netsh to change settings on connect-->
@@ -767,7 +767,7 @@
 			<ParentImage condition="is">C:\Program Files (x86)\Dell\CommandUpdate\InvColPC.exe</ParentImage> <!--Dell:CommandUpdate: Detection process-->
 			<Image condition="is">C:\Program Files\Dell\SupportAssist\pcdrcui.exe</Image> <!--Dell:SupportAssist: routine actions-->
 			<Image condition="is">C:\Program Files\Dell\SupportAssist\koala.exe</Image> <!--Dell:SupportAssist: routine actions-->
-			<ParentCommandLine condition="end with">"-outc=C:\ProgramData\Dell\CommandUpdate\inventory.xml" "-logc=C:\ProgramData\Dell\CommandUpdate\scanerrs.xml" "-lang=en" "-enc=UTF-16" </ParentCommandLine>			
+			<ParentCommandLine condition="end with">"-outc=C:\ProgramData\Dell\CommandUpdate\inventory.xml" "-logc=C:\ProgramData\Dell\CommandUpdate\scanerrs.xml" "-lang=en" "-enc=UTF-16" </ParentCommandLine>
 			<!-- <ParentImage condition="image">C:\Program Files (x86)\Dell\CommandUpdate\InvColPC.exe</ParentImage> --> <!--Dell:CommandUpdate: Detection process-->
 			<!--SECTION: Lenovo-->
 			<Image condition="is">C:\Program Files (x86)\Lenovo\System Update\ConfigService.exe</Image> <!--Lenovo: System Update-->
@@ -1186,10 +1186,10 @@
 			<Image condition="is">C:\Program Files\Microsoft\Exchange Server\V15\Bin\MSExchangeDelivery.exe</Image>
 			<!--Ignore Microsoft Connections-->
 			<!--Microsoft Net Connections-->
-			<Image condition="is">C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\SearchUI.exe</Image>			
+			<Image condition="is">C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\SearchUI.exe</Image>
 			<Image condition="is">C:\Windows\CCM\CcmExec.exe</Image>
-			
-			
+
+
 			<!--Microsoft ASN IP Block-->
 			<DestinationHostname condition="end with">aps.windows.com</DestinationHostname>
 			<DestinationHostname condition="end with">arc.msn.com</DestinationHostname>
@@ -1420,6 +1420,7 @@
 		</ImageLoad>
 		<ImageLoad onmatch="exclude">
 			<SignatureStatus condition="is">Valid</SignatureStatus>
+			<imageloaded condition="begin with">C:\Program Files (x86)\Epicor\ITSM\Client\</imageloaded> <!--Epicor-->
 			<ImageLoaded condition="end with">System32\samlib.dll</ImageLoaded> <!-- Spam -->
 			<ImageLoaded condition="end with">System32\cryptdll.dlll</ImageLoaded> <!-- Spam -->
 			<Signature condition="contains">microsoft</Signature> <!--Exclude signed Microsoft libraries-->
@@ -1514,7 +1515,7 @@
 		<CreateRemoteThread onmatch="exclude">
 			<!--COMMENT: Exclude mostly-safe sources and log anything else.-->
 			<SourceImage condition="is">C:\Windows\system32\wbem\WmiPrvSE.exe</SourceImage>
-			<SourceImage condition="is">C:\Windows\SysWOW64\wbem\WmiPrvSE.exe</SourceImage>			
+			<SourceImage condition="is">C:\Windows\SysWOW64\wbem\WmiPrvSE.exe</SourceImage>
 			<SourceImage condition="is">C:\Windows\system32\svchost.exe</SourceImage>
 			<SourceImage condition="is">C:\Windows\system32\wininit.exe</SourceImage>
 			<SourceImage condition="is">C:\Windows\system32\csrss.exe</SourceImage>
@@ -2770,7 +2771,7 @@
 			<TargetObject condition="end with">SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\Scripts\Shutdown\0\0\ExecTime</TargetObject> <!--Microsoft:Windows:Group Policy: Noise below the actual key while building-->
 			<TargetObject condition="contains">\safer\codeidentifiers\0\HASHES\{</TargetObject> <!--Microsoft:Windows: Software Restriction Policies. Can be used to disable security tools, but very noisy to monitor if you use it--> <!--OPTIONAL FILTER-->
 			<!--Autoruns noise-->
-			<!--<Details condition="is">c:\program files (x86)\microsoft office\office16\lync.exe</Details> Microsoft:Office: SkypeForBusiness autorun--> 
+			<!--<Details condition="is">c:\program files (x86)\microsoft office\office16\lync.exe</Details> Microsoft:Office: SkypeForBusiness autorun-->
 			<!--<Details condition="is">"C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnui.exe" -minimized</Details> Cisco: AnyConnect autorun-->
 			<!--<Details condition="contains">ScanToPCActivationApp.exe" -deviceID "</Details> HP: Printer-->
 			<!--SECTION: 3rd party-->
@@ -2900,7 +2901,7 @@
 	<!--SYSMON EVENT ID 16 : SYSMON CONFIGURATION CHANGE-->
 		<!--EVENT 16: "Sysmon config state changed"-->
 		<!--COMMENT:	This ONLY logs if the hash of the configuration changes. Running "sysmon.exe -c" with the current configuration will not be logged with Event 16-->
-		
+
 		<!--DATA: RuleName, UtcTime, Configuration, ConfigurationFileHash-->
 		<!--Cannot be filtered.-->
 
